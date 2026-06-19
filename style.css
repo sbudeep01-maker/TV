@@ -1,0 +1,139 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#09090c;
+height:100vh;
+font-family:sans-serif;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+}
+
+.scene{
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+.sun{
+position:absolute;
+width:500px;
+height:500px;
+background:#ff2f2f;
+border-radius:50%;
+filter:blur(10px);
+animation:pulse 6s infinite ease-in-out;
+}
+
+.sasuke{
+height:90vh;
+position:relative;
+z-index:5;
+animation:float 5s ease-in-out infinite;
+filter:
+drop-shadow(0 0 25px crimson)
+drop-shadow(0 0 80px red);
+}
+
+@keyframes float{
+50%{
+transform:translateY(-12px);
+}
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.05);
+}
+}
+
+.crow{
+position:absolute;
+font-size:50px;
+z-index:8;
+opacity:.8;
+}
+
+.crow1{
+top:20%;
+left:-100px;
+animation:fly1 15s linear infinite;
+}
+
+.crow2{
+top:40%;
+left:-100px;
+animation:fly2 18s linear infinite;
+}
+
+.crow3{
+top:15%;
+left:-100px;
+animation:fly3 12s linear infinite;
+}
+
+@keyframes fly1{
+to{
+transform:translateX(120vw);
+}
+}
+
+@keyframes fly2{
+to{
+transform:translateX(120vw);
+}
+}
+
+@keyframes fly3{
+to{
+transform:translateX(120vw);
+}
+}
+
+.leaf{
+position:absolute;
+font-size:25px;
+color:red;
+opacity:.7;
+}
+
+.leaf1{
+left:10%;
+animation:fall 7s infinite linear;
+}
+
+.leaf2{
+left:30%;
+animation:fall 10s infinite linear;
+}
+
+.leaf3{
+left:60%;
+animation:fall 8s infinite linear;
+}
+
+.leaf4{
+left:80%;
+animation:fall 9s infinite linear;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
